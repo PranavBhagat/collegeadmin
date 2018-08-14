@@ -141,7 +141,8 @@ select.form-control {
 // The `.form-group-* form-control` variations are sadly duplicated to avoid the
 // issue documented in https://github.com/twbs/bootstrap/issues/15074.
 
-.form-control-sm {
+.form-control-sm
+ {
   padding: $input-padding-y-sm $input-padding-x-sm;
   font-size: $font-size-sm;
   line-height: $input-line-height-sm;
@@ -239,7 +240,6 @@ select.form-control-lg {
     margin-left: 0;
   }
 }
-
 
 // Form validation
 //

@@ -96,6 +96,7 @@
 // When collapsed, prevent the toggleable navbar contents from appearing in
 // the default flexbox row orienation. Requires the use of `flex-wrap: wrap`
 // on the `.navbar` parent.
+
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
@@ -153,7 +154,7 @@
 
       @include media-breakpoint-up($next) {
         flex-flow: row nowrap;
-        justify-content: flex-start;
+        justify-content: flex-end;
 
         .navbar-nav {
           flex-direction: row;
