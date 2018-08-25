@@ -5,10 +5,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import * as firebase from 'firebase';
+
+var config = {
+    apiKey: "AIzaSyBFU-Wn9tNhyRGQtTJOiB1F7O0dlqE8enE",
+    authDomain: "college-29a28.firebaseapp.com",
+    databaseURL: "https://college-29a28.firebaseio.com",
+    projectId: "college-29a28",
+    storageBucket: "college-29a28.appspot.com",
+    messagingSenderId: "402666727381"
+  };
+  firebase.initializeApp(config);
+
 
 // AoT requires an exported function for factories
 export const createTranslateLoader = (http: HttpClient) => {
@@ -27,6 +40,7 @@ export const createTranslateLoader = (http: HttpClient) => {
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule,
+        ReactiveFormsModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

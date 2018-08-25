@@ -1,33 +1,36 @@
 <div [@routerTransition]>
-
-<div id="myDIV" ><p>Search College!</p>
-   	<input class="form-control mr-sm-3" type="text" placeholder="Search College.." style="margin-left: 500px">
+<h3>College Information {{collegesData[0].name}}</h3>
+  <div class="button" style="padding-top:18px;padding-bottom: 20px;">
+            <a (click)="editData(null)" class="btn btn-outline-success btn-block">Add Information</a>
+          </div>
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr >
+      <th *ngFor="let col of columns">{{col}}</th>
+    </tr>
+    
+  </thead>
+  <tbody>
+      <tr *ngFor="let colg of collegesData;let i=index;">
+        <td>{{i+1}}</td>
+        <td>{{colg.name}}</td>
+        <td>{{colg.course}}</td>
+        <td>{{colg.type}}</td>
+        <td>{{colg.phone}}</td>
+        <td>{{colg.duration}}</td>
+        <td>{{colg.fees}}</td>
+        <td>{{colg.address.line1}}</td>
+        <td>{{colg.address.line2}}</td>
+        <td>{{colg.pincode}}</td>
+        <td>{{colg.state}}</td>
+        <td>{{colg.city}}</td>
+     
+      
+        <td></td>
+        <td><a (click)="editData(colg)" class="btn btn-outline-success btn-block">Edit</a></td>
+      </tr>
+    </tbody>
+</table>
 </div>
-
-<div class="container-fluid">
-<div class="row">
-	<div *ngFor="let x of obj">
-
-	<div class="col-xl-* col-lg-* card"  style="width: 100%">
-
-		<img src="{{x.cimg}}">
-		<p>{{x.cname}}</p>
-
-	<div class="dropdown">
-	<button class="dropbtn">Under Graduate</button>
-    <div class="dropdown-content" *ngFor="let y of x.ug">
-    <a href="{{x.cimg}}">{{y.cor}}</a>
-  	</div>
-	</div>
-	<div class="dropdown">
-  <button class="dropbtn">Post Graduate</button>
-    <div class="dropdown-content" *ngFor="let z of x.pg">
-    <a routerLink="/collegeinfo">{{z.cor}}</a>
-  	</div>
-  	</div>
-	</div>
-	</div>
 </div>
-
-</div>
-

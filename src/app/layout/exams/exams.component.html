@@ -1,11 +1,48 @@
 <div [@routerTransition]>
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" routerLink="/college">After 12th Exams</a>
-    
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">After UG Program</a>
- </li>
-</ul>
-<
+<h3>Exam Information</h3>
+  <div class="button" style="padding-top:18px;padding-bottom: 20px;">
+            <a routerLink="/addexam" class="btn btn-outline-success btn-block">Add Information</a>
+          </div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Exam Name</th>
+      <th scope="col">Location</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Jee</td>
+      <td>Nagpur</td>
+      <td><div class="button" >
+            <a routerLink="/addcol" class="btn btn-outline-success btn-block">Edit</a>
+          </div><div class="button" >
+            <a routerLink="/addexam" class="btn btn-outline-success btn-block">Delete</a>
+          </div></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Neet</td>
+      <td>Nagpur</td>
+      <td><div class="button" >
+            <a routerLink="/addcol" class="btn btn-outline-success btn-block">Edit</a>
+          </div><div class="button" >
+            <a routerLink="/addexam" class="btn btn-outline-success btn-block">Delete</a>
+          </div></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Cet</td>
+      <td>Nagpur</td>
+      <td><div class="button" >
+            <a routerLink="/addcol" class="btn btn-outline-success btn-block">Edit</a>
+          </div><div class="button" >
+            <a routerLink="/addexam" class="btn btn-outline-success btn-block">Delete</a>
+          </div></td>
+    </tr>
+  </tbody>
+</table>
+</div>

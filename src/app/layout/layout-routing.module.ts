@@ -7,7 +7,7 @@ const routes: Routes = [
         path: '',
         component: LayoutComponent,
         children: [
-            { path: '', redirectTo: 'dashboard', pathMatch: 'prefix' },
+            { path: '', redirectTo: 'college', pathMatch: 'prefix' },
             { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
             { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
             { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
@@ -19,7 +19,10 @@ const routes: Routes = [
              { path: 'college', loadChildren: './college/college.module#CollegeModule' },
             { path: 'exams', loadChildren: './exams/exams.module#ExamsModule' }
             ,
-            { path: 'collegeinfo', loadChildren: './college/college-info/college-info.module#CollegeInfoModule' }
+            { path: 'collegeinfo', loadChildren: './college/college-info/college-info.module#CollegeInfoModule' },
+            { path: 'addcol', loadChildren: './college/addcol/addcol.module#AddcolModule' }
+            ,
+            { path: 'addexam', loadChildren: './exams/addexam/addexam.module#AddexamModule' }
         ]
     }
 ];

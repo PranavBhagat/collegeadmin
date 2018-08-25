@@ -1,0 +1,111 @@
+<div [@routerTransition]>
+  <h3>Add Information</h3>
+<div class="container-fluid card">
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+ 
+  <label>
+    College Name:
+    <input type="text" formControlName="name">
+  </label><br>
+  <div *ngIf="profileForm.controls.name.invalid && (profileForm.controls.name.dirty || profileForm.controls.name.touched)" style="color: red;">
+    <i> Error: length of name should be more than 4</i>
+  </div>
+
+  <label>
+    Course :
+    <input type="text" formControlName="course">
+  </label><br>
+
+<div formGroupName="address">
+                    <label>Address Line 1</label>
+                    <div>
+                        <input id="address-line1" formControlName="line1" type="text" placeholder="address line 1"
+                        class="input-xlarge">
+                        <p class="help-block" style="color: blue"><i>Street address, P.O. box, company name, c/o</i></p>
+                    </div>
+              
+                <!-- address-line2 input-->
+                <div>
+                    <label>Address Line 2</label>
+                    <div>
+                        <input id="address-line2" formControlName="line2" type="text" placeholder="address line 2"
+                        class="input-xlarge">
+                        <p class="help-block" style="color: blue"><i>Apartment, suite , unit, building, floor, etc.</i></p>
+                    </div>
+                </div>
+                </div>
+
+ <label >City:</label>
+  <select formControlName="city" >
+    <option>Nagpur</option>
+    <option>Mumbai</option>
+    <option>Pune</option>
+    <option>Raipur</option>
+  </select>
+
+  <label >State:</label>
+  <select formControlName="state">
+    <option>Maharashtra</option>
+    <option>Madhya Pradesh</option>
+    <option>Uttar Pradesh</option>
+    <option>Delhi</option>
+  </select>
+
+  <label>Pincode:
+  <input type="number" formControlName="pincode"></label>
+
+ 
+
+  <label>Institute Type:
+  <input type="text" formControlName="type"></label>
+
+ <label>Phone:
+  <input type="number" formControlName="phone"></label>
+
+  <label>Duration:
+  <input type="number" formControlName="duration"></label>
+
+  <label>Fees:
+  <input type="number" formControlName="fees"></label>
+
+
+
+  <!-- Button code below -->
+<div>
+
+  <button style="padding: 7px;" type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+</div>
+
+</form>
+
+<!-- <p>First Name: {{profileForm.controls.firstName.value}}</p>
+
+  <button (click)="updateName()">Update Name</button>
+ -->
+<!-- <p>Last Name: {{profileForm.controls.lastName.value}}</p>
+<p>Location: {{profileForm.controls.location.value}}</p> -->
+</div>
+</div>
+<!-- <div class="container-fluid con">
+  <div class="form-group">
+    <label >College Name</label>
+    <input type="form-text" class="form-control" id="exampleInputEmail1" placeholder="Enter Name">
+    
+  </div>
+ 
+<div class="dropdown">
+  <label >College Location</label><br>
+  <button class="btn btn-primary">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Nagpur</a>
+    <a href="#">Mumbai</a>
+    <a href="#">Pune</a>
+  </div>
+
+</div>
+<br>
+<div style="float: right;">
+  <button type="submit" class="btn btn-primary">Add</button>
+</div>
+</div> -->
